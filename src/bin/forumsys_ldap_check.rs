@@ -38,7 +38,7 @@ fn main() {
     let matches = App::new("ldapcheck")
         .version("0.1")
         .author("T.J. Yang <tjyang2001@gmail.com>")
-        .about("LDAP programming using Rust Language\nEx1: cargo run --bin forumsys_ldap_check  -- -c -l ldap://ldap.forumsys.com:389 -a read-only-admin -p password.\nEx2: forumsys_ldap_check --check -l ldap://ldap.forumsys.com:389 -a read-only-admin -p password")
+        .about("LDAP programming using Rust Language.\nEx1: cargo run --bin forumsys_ldap_check  -- -c -l ldap://ldap.forumsys.com:389 -a read-only-admin -p password.\nEx2: forumsys_ldap_check --check -l ldap://ldap.forumsys.com:389 -a read-only-admin -p password")
         .arg(
             Arg::with_name("account")
                 .short("a")
