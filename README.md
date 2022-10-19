@@ -1,4 +1,6 @@
 # rexpect-examples
+
+```
 [me@ipa01 rexpect-examples]$ make build
 <snipped>
 [me@ipa01 rexpect-examples]$ target/debug/forumsys_ldap_check -h
@@ -28,3 +30,4 @@ SUBCOMMANDS:
     help    Prints this message or the help of the given subcommand(s)
     test    controls testing features
 [me@ipa01 rexpect-examples]$
+```
