@@ -10,10 +10,18 @@ categories  = ["command-line-utilities" ]
 keywords    = ["rexpect","ldap", "Active Directory", "package", "release"]
 exclude     = ["*.yml","*.dot"]
 
+#[features]
+#default = [
+#  "std",
+#  "color",
+#  "help",
+#  "usage",
+#  "error-context",
+#  "suggestions",
+#]
+
 [dependencies]
-#rexpect = "0.4.0"
 rexpect  = { git = "https://github.com/rust-cli/rexpect", branch = "master" }
-#clap = "4.0.17"
 clap = "2.32.0"
 os_info = "3.5.1"
 oping = "0.4.0"
