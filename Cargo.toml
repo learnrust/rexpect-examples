@@ -1,0 +1,20 @@
+[package]
+name = "rexpect-examples"
+version = "0.1.0"
+authors = ["https://github.com/learnrust/rexpect-examples"]
+description = "advance examples for rexpect"
+license     = "MIT"
+homepage    = ""
+readme      = "README.md"
+categories  = ["command-line-utilities" ]
+keywords    = ["rexpect","ldap", "Active Directory", "package", "release"]
+exclude     = ["*.yml","*.dot"]
+
+[dependencies]
+#rexpect = "0.4.0"
+rexpect  = { git = "https://github.com/rust-cli/rexpect", branch = "master" }
+#clap = "4.0.17"
+clap = "2.32.0"
+os_info = "3.5.1"
+oping = "0.4.0"
+ldap3 = "0.10.5"
