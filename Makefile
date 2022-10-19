@@ -3,7 +3,7 @@ VERSION		= 1.0
 RELEASE		= 2
 DATE		= $(shell date)
 NEWRELEASE	= $(shell echo $$(($(RELEASE) + 1)))
-PROJECT_NAME    = rock
+PROJECT_NAME    = rexpect-examples
 TOPDIR = $(shell pwd)
 MANPAGES = 
 A2PS2S1C  = /bin/a2ps --sides=2 --medium=Letter --columns=1 --portrait --line-numbers=1 --font-size=8
@@ -33,7 +33,6 @@ build: clean
 
 clean: cleantmp
 	-rm -rf *~ *.lock
-	-rm -rf rpm-build/
 	-rm -rf docs/*.1
 	-find . -type f -name *.pyc -exec rm -f {} \;
 	-find . -type f -name *~  -exec rm -f {} \;
@@ -74,7 +73,7 @@ tree: clean
 	tree -L 4 > ${PROJECT_NAME}-dir-layout.txt
 
 test:
-	(cd rock && cargo build && sudo target/debug/rock -h)
+	(cargo test)
 
 # enable makefile to accept argument after command
 #https://stackoverflow.com/questions/6273608/how-to-pass-argument-to-makefile-from-command-line
@@ -83,13 +82,6 @@ args = `arg="$(filter-out $@,$(MAKECMDGOALS))" && echo $${arg:-${1}}`
 %:
 	@:
 
-examples: examples/bash_read.rs examples/exit_code.rs examples/repl.rs examples/bash.rs examples/ftp.rs examples/tcp.rs
-	cargo run --example bash_read
-	cargo run --example bash  
-	cargo run --example exit_code 
-	cargo run --example ftp   
-	cargo run --example repl
-	cargo run --example tcp
 status:
 	git status
 commit:
@@ -100,12 +92,9 @@ help:
 	@echo "Usage: make <target> <argument>"
 	@echo
 	@echo "Available targets are:"
-	@echo "  all                    Default without argument"
+	@echo "  build                  call up cargo build"
 	@echo "  help                   Showing this help "
-	@echo "  install                Install devtool"
-	@echo "  examples               run *.rs in examples"
-	@echo "  build  rpm-name        Ex: make build perl "
-	@echo "  clean                  clean myrocky and srpmproc "
+	@echo "  clean                  clean all artifact files"
 	@echo "  commit {"my message"}  ie, git commit, without or with real commit message"
 	@echo "  status                 ie, git status"
 	@echo "  pull                   ie, git pull"
