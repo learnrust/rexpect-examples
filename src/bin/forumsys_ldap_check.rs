@@ -1,5 +1,5 @@
 // WHAT:
-//   ldap:389 connection check using public ldap.forumsys.com
+//  Using rexpect and ldap3 crates to check ldap:389 connection.
 //
 // HOW:
 //  1. To run: cargo run --bin forumsys_ldap_check  -- -c -l ldap://ldap.forumsys.com:389 -a read-only-admin -p password
