@@ -1,0 +1,22 @@
+[package]
+name = "clap4-examples"
+version = "0.1.0"
+authors = ["https://github.com/learnrust/rexpect-examples"]
+description = "clap 4 examples"
+license     = "MIT"
+homepage    = "https://github.com/learnrust/rexpect-examples/clap4"
+readme      = "README.md"
+categories  = ["command-line-utilities" ]
+keywords    = ["clap"]
+exclude     = ["*.yml","*.dot"]
+[dependencies]
+clap = "4.0.17"
+
+[features]
+default = [
+  "derive",
+]
+
+[[example]]
+name = "demo"
+required-features = ["derive"]
