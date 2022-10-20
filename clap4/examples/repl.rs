@@ -1,3 +1,4 @@
+extern crate clap;
 use std::io::Write;
 
 use clap::Command;

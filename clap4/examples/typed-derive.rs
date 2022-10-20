@@ -1,3 +1,4 @@
+extern crate clap;
 use clap::builder::TypedValueParser as _;
 use clap::Parser;
 use std::error::Error;

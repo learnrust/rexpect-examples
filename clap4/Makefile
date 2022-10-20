@@ -103,3 +103,22 @@ check:
 build: clean 
 	(cargo build)
 
+
+.PHONY: examples
+_FEATURES4 = 
+_DEBUG4 = target/debug/examples
+
+cargo-example:
+	cargo build ${_FEATURES4} --example cargo-example && ${_DEBUG4}/cargo-example --help
+examples: cargo-example
+	cargo build ${_FEATURES4} --example cargo-example-derive && ${_DEBUG4}/cargo-example-derive --help
+	cargo build ${_FEATURES4} --example demo && ${_DEBUG4}/demo --help
+	cargo build ${_FEATURES4} --example find && ${_DEBUG4}/find --help
+	cargo build ${_FEATURES4} --example pacman && ${_DEBUG4}/pacman --help
+	cargo build ${_FEATURES4} --example git && ${_DEBUG4}/git --help
+	cargo build ${_FEATURES4} --example repl && ls -l ${_DEBUG4}/repl
+	cargo build ${_FEATURES4} --example typed-derive && ${_DEBUG4}/typed-derive --help
+	cargo build ${_FEATURES4} --example escaped-positional-derive && ${_DEBUG4}/escaped-positional-derive  --help
+	cargo build ${_FEATURES4} --example escaped-positional && ${_DEBUG4}/escaped-positional --help
+	cargo build ${_FEATURES4} --example multicall-hostname && ${_DEBUG4}/multicall-hostname --help
+	cargo build ${_FEATURES4} --example multicall-busybox && ${_DEBUG4}/multicall-busybox  --help

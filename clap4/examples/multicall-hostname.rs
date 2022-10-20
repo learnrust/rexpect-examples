@@ -1,3 +1,4 @@
+extern crate clap;
 use clap::Command;
 
 fn main() {

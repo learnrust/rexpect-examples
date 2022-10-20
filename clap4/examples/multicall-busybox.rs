@@ -1,3 +1,4 @@
+extern crate clap;
 use std::path::PathBuf;
 use std::process::exit;
 

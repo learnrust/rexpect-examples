@@ -1,3 +1,4 @@
+extern crate clap;
 use clap::{arg, command, value_parser, ArgAction};
 
 fn main() {

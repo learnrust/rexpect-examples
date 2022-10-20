@@ -1,3 +1,4 @@
+extern crate clap;
 use std::ffi::OsString;
 use std::path::PathBuf;
 

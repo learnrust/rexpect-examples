@@ -1,3 +1,4 @@
+extern crate clap;
 use std::collections::BTreeMap;
 
 use clap::{arg, command, ArgGroup, ArgMatches, Command};
