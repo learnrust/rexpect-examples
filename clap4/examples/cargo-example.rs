@@ -1,4 +1,5 @@
 extern crate clap;
+
 fn main() {
     let cmd = clap::Command::new("cargo")
         .bin_name("cargo")
