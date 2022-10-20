@@ -31,7 +31,6 @@ manpage:
 clean: cleantmp
 	-rm -rf *~ *.lock
 	-rm -rf docs/*.1
-	-find . -type f -name *.pyc -exec rm -f {} \;
 	-find . -type f -name *~  -exec rm -f {} \;
 	-find . -type d -name target -exec rm -rf {} \;
 
@@ -100,11 +99,11 @@ help:
 check:
 	rpm -q liboping-devel
 
-build: clean 
+.PHONY: examples build check
+
+build:
 	(cargo build)
 
-
-.PHONY: examples
 _FEATURES4 = 
 _DEBUG4 = target/debug/examples
 
