@@ -11,5 +11,5 @@ keywords    = ["clap"]
 exclude     = ["*.yml","*.dot"]
 
 [dependencies]
-clap = "4.0.17"
+clap = {version = "4.0.17", features = ["derive", "env","cargo"]}
 
