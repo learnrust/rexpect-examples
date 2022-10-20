@@ -1,4 +1,3 @@
-extern crate clap;
 use std::path::PathBuf;
 
 use clap::{arg, command, value_parser, ArgAction, Command};

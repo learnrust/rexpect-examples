@@ -10,9 +10,6 @@
 //  TODOs
 //  1. using latest clap crate.
 
-extern crate clap;
-extern crate ldap3;
-
 use clap::{App, Arg, SubCommand};
 use ldap3::LdapConn;
 use std::error::Error;
