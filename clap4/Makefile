@@ -28,9 +28,6 @@ versionfile:
 manpage:
 	for manpage in $(MANPAGES); do (pod2man --center=$$manpage --release="" ./docs/$$manpage.pod > ./docs/$$manpage.1); done
 
-build: clean 
-	(cargo build)
-
 clean: cleantmp
 	-rm -rf *~ *.lock
 	-rm -rf docs/*.1
@@ -102,3 +99,7 @@ help:
 
 check:
 	rpm -q liboping-devel
+
+build: clean 
+	(cargo build)
+

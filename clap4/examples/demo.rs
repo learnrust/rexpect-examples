@@ -1,3 +1,4 @@
+extern crate clap;
 use clap::Parser;
 
 /// Simple program to greet a person

@@ -9,14 +9,7 @@ readme      = "README.md"
 categories  = ["command-line-utilities" ]
 keywords    = ["clap"]
 exclude     = ["*.yml","*.dot"]
+
 [dependencies]
 clap = "4.0.17"
 
-[features]
-default = [
-  "derive",
-]
-
-[[example]]
-name = "demo"
-required-features = ["derive"]
