@@ -1,9 +1,9 @@
 [package]
-name = "clap4-examples"
-version = "0.1.0"
+name = "ldap"
+version = "0.1.1"
 edition = "2021"
 authors = ["https://github.com/learnrust/rexpect-examples"]
-description = "clap 4 examples"
+description = "ldap+rexpect+clap4"
 license     = "MIT"
 homepage    = "https://github.com/learnrust/rexpect-examples/clap4"
 readme      = "README.md"

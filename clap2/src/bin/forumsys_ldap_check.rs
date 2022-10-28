@@ -99,6 +99,6 @@ fn main() {
             Err(e) => println!("{:?}", e),
         }
     } else {
-        // TBC.
+    println!("No argument  provided");
     }
 }
